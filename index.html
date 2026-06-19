@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AR Realty CDN</title>
+
+    <meta name="description"
+        content="Official AR Realty CDN for hosting CSS, JavaScript, Images, Fonts, and Static Assets.">
+
+    <meta name="robots" content="index,follow">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #64748b;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #e2e8f0;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        p {
+            color: #475569;
+        }
+
+        code {
+            display: block;
+            background: #0f172a;
+            color: #f8fafc;
+            padding: 15px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin-top: 15px;
+            font-family: Consolas, monospace;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            padding: 14px;
+            border: 1px solid #e2e8f0;
+            text-align: left;
+        }
+
+        th {
+            background: #f1f5f9;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #64748b;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature {
+            background: #fff;
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, .05);
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+        }
+
+        @media(max-width:768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <section class="hero">
+            <div class="badge">Official CDN Documentation</div>
+
+            <h1>AR Realty CDN</h1>
+
+            <p>
+                Fast and reliable delivery of CSS, JavaScript, Images, Fonts,
+                and static assets for AR Realty applications.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Base URL</h2>
+
+            <code>
+https://cdn.arrealtyco.com/static/
+        </code>
+
+            <p style="margin-top:15px;">
+                All public static assets are served from the CDN endpoint above.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Available Assets</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Asset Type</th>
+                        <th>Example URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CSS</td>
+                        <td>https://cdn.arrealtyco.com/static/style-min.css</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>https://cdn.arrealtyco.com/static/js/app-min.js</td>
+                    </tr>
+                    <tr>
+                        <td>Image</td>
+                        <td>https://cdn.arrealtyco.com/static/img/logo.webp</td>
+                    </tr>
+                    <tr>
+                        <td>Font</td>
+                        <td>https://cdn.arrealtyco.com/static/fonts/inter.woff2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>Django Configuration</h2>
+
+            <code>
+STATIC_URL = "https://cdn.arrealtyco.com/static/"
+        </code>
+
+            <code>
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'style-min.css' %}">
+<script src="{% static 'js/app-min.js' %}"></script>
+        </code>
+        </section>
+
+        <section class="card">
+            <h2>Direct HTML Usage</h2>
+        <pre>
+            <code>
+    < link rel="stylesheet" href="https://cdn.arrealtyco.com/static/style-min.css">
+    </code>
+    </pre>
+<script
+      src="https://cdn.arrealtyco.com/static/js/app-min.js">
+    </script>
+        </code>
+        </section>
+
+        <section class="card">
+            <h2>Image Example</h2>
+
+            <code>
+<img src="./static/img/core-img/logo.png"
+     alt="AR Realty Logo" style="width:200px; height:auto; object-fit:contain;">
+        </code>
+        </section>
+
+        <section class="card">
+            <h2>Directory Structure</h2>
+            <pre>
+        <code>
+/static/
+├── style-min.css
+├── js/
+│   └── app-min.js
+├── img/
+│   └── logo.webp
+└── fonts/
+    └── inter.woff2
+        </code>
+        </pre>
+        </section>
+
+        <div class="grid">
+            <div class="feature">
+                <h3>⚡ Fast Delivery</h3>
+                <p>Optimized CDN distribution for static assets.</p>
+            </div>
+
+            <div class="feature">
+                <h3>🔒 Secure Hosting</h3>
+                <p>HTTPS enabled asset delivery.</p>
+            </div>
+
+            <div class="feature">
+                <h3>📦 Asset Caching</h3>
+                <p>Improved performance through browser caching.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            © 2026 AR Realty CDN • Static Asset Infrastructure
+        </div>
+
+    </div>
+
+</body>
+
+</html>
